@@ -1,0 +1,3 @@
+export type Task = { id:string; title:string; minutes:number; done:boolean; category:string; optional:boolean; sourceDetail?:string };
+export type Plan = { id:string; mode:"quick"|"steps"|"long"; title:string; objective:string; tasks:Task[]; createdAt:number; paused?:boolean; totalMinutes:number; materials:string[]; confidenceNotes:string[]; sourceUnderstanding:string };
+export type Resource = { id:string; url:string; title:string; source:string; description:string; category:string; minutes:number; status:"explore"|"ready"|"progress"|"completed"; createdAt:number; contentText?:string; resourceType?:string; processingStatus?:string; processingMethod?:string; plan?:Plan };
